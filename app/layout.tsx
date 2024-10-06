@@ -14,11 +14,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
 });
 
-let title = "BlinkShot – Real-Time AI Image Generator";
+let title = "TurboCraft v2 – Real-Time images";
 let description = "Generate images with AI in a milliseconds";
-let url = "https://www.blinkshot.io/";
-let ogimage = "https://www.blinkshot.io/og-image.png";
-let sitename = "blinkshot.io";
+let url = "https://pixio.myapps.ai";
+let ogimage = "https://img.mytsi.org/i/glkp719.png";
+let sitename = "pixio.myapps.ai";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),

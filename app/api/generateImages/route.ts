@@ -18,9 +18,9 @@ if (process.env.UPSTASH_REDIS_REST_URL) {
   ratelimit = new Ratelimit({
     redis: Redis.fromEnv(),
     // Allow 100 requests per day (~5-10 prompts)
-    limiter: Ratelimit.fixedWindow(100, "1440 m"),
+    limiter: Ratelimit.fixedWindow(200, "1440 m"),
     analytics: true,
-    prefix: "blinkshot",
+    prefix: "pixio",
   });
 }
 
@@ -57,7 +57,7 @@ export async function POST(req: Request) {
   try {
     response = await client.images.create({
       prompt,
-      model: "black-forest-labs/FLUX.1-schnell",
+      model: "black-forest-labs/FLUX.1-schnell-Free",
       width: 1024,
       height: 768,
       steps: 3,
